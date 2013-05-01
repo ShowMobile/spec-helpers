@@ -1,0 +1,256 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49E49BFE1731630B0013EE5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49E49BFD1731630B0013EE5A /* Foundation.framework */; };
+		49E49C0E173163900013EE5A /* NSObject+Creator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E49C0D173163900013EE5A /* NSObject+Creator.m */; };
+		49E49C11173163A70013EE5A /* UIView+ViewAnimationTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E49C10173163A70013EE5A /* UIView+ViewAnimationTesting.m */; };
+		49E49C14173163C50013EE5A /* ClassHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E49C13173163C50013EE5A /* ClassHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49E49BF81731630B0013EE5A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		49E49BFA1731630B0013EE5A /* libSpecHelpers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpecHelpers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E49BFD1731630B0013EE5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49E49C0C1731638A0013EE5A /* NSObject+Creator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Creator.h"; sourceTree = "<group>"; };
+		49E49C0D173163900013EE5A /* NSObject+Creator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Creator.m"; sourceTree = "<group>"; };
+		49E49C0F173163A10013EE5A /* UIView+ViewAnimationTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ViewAnimationTesting.h"; sourceTree = "<group>"; };
+		49E49C10173163A70013EE5A /* UIView+ViewAnimationTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ViewAnimationTesting.m"; sourceTree = "<group>"; };
+		49E49C12173163C00013EE5A /* ClassHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassHelper.h; sourceTree = "<group>"; };
+		49E49C13173163C50013EE5A /* ClassHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49E49BF71731630B0013EE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E49BFE1731630B0013EE5A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49E49BF11731630B0013EE5A = {
+			isa = PBXGroup;
+			children = (
+				49E49BFF1731630B0013EE5A /* SpecHelpers */,
+				49E49BFC1731630B0013EE5A /* Frameworks */,
+				49E49BFB1731630B0013EE5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49E49BFB1731630B0013EE5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49E49BFA1731630B0013EE5A /* libSpecHelpers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49E49BFC1731630B0013EE5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49E49BFD1731630B0013EE5A /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49E49BFF1731630B0013EE5A /* SpecHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				49E49C0C1731638A0013EE5A /* NSObject+Creator.h */,
+				49E49C12173163C00013EE5A /* ClassHelper.h */,
+				49E49C0F173163A10013EE5A /* UIView+ViewAnimationTesting.h */,
+				49E49C0B1731634D0013EE5A /* private */,
+			);
+			path = SpecHelpers;
+			sourceTree = "<group>";
+		};
+		49E49C0B1731634D0013EE5A /* private */ = {
+			isa = PBXGroup;
+			children = (
+				49E49C0D173163900013EE5A /* NSObject+Creator.m */,
+				49E49C10173163A70013EE5A /* UIView+ViewAnimationTesting.m */,
+				49E49C13173163C50013EE5A /* ClassHelper.m */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49E49BF91731630B0013EE5A /* SpecHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49E49C081731630B0013EE5A /* Build configuration list for PBXNativeTarget "SpecHelpers" */;
+			buildPhases = (
+				49E49BF61731630B0013EE5A /* Sources */,
+				49E49BF71731630B0013EE5A /* Frameworks */,
+				49E49BF81731630B0013EE5A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpecHelpers;
+			productName = SpecHelpers;
+			productReference = 49E49BFA1731630B0013EE5A /* libSpecHelpers.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49E49BF21731630B0013EE5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Drewag;
+			};
+			buildConfigurationList = 49E49BF51731630B0013EE5A /* Build configuration list for PBXProject "SpecHelpers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49E49BF11731630B0013EE5A;
+			productRefGroup = 49E49BFB1731630B0013EE5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49E49BF91731630B0013EE5A /* SpecHelpers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49E49BF61731630B0013EE5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E49C0E173163900013EE5A /* NSObject+Creator.m in Sources */,
+				49E49C11173163A70013EE5A /* UIView+ViewAnimationTesting.m in Sources */,
+				49E49C14173163C50013EE5A /* ClassHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		49E49C061731630B0013EE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		49E49C071731630B0013EE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49E49C091731630B0013EE5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SpecHelpers.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpecHelpers/SpecHelpers-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		49E49C0A1731630B0013EE5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SpecHelpers.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpecHelpers/SpecHelpers-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49E49BF51731630B0013EE5A /* Build configuration list for PBXProject "SpecHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E49C061731630B0013EE5A /* Debug */,
+				49E49C071731630B0013EE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49E49C081731630B0013EE5A /* Build configuration list for PBXNativeTarget "SpecHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E49C091731630B0013EE5A /* Debug */,
+				49E49C0A1731630B0013EE5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49E49BF21731630B0013EE5A /* Project object */;
+}
