@@ -1,9 +1,9 @@
 //
 //  NSObject+Creator.m
-//  Notecards
+//  SpecHelpers
 //
 //  Created by Andrew J Wagner on 11/9/12.
-//  Copyright (c) 2012 Digital Assertion. All rights reserved.
+//  Copyright (c) 2012 Drewag. All rights reserved.
 //
 
 #import "NSObject+Creator.h"

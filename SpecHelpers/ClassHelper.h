@@ -1,9 +1,9 @@
 //
 //  ClassHelper.h
-//  KegTrack
+//  SpecHelpers
 //
 //  Created by Andrew J Wagner on 2/14/13.
-//  Copyright (c) 2013 Drewag. All rights reserved.
+//  Copyright (c) 2012 Drewag. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

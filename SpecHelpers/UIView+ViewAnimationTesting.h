@@ -1,6 +1,6 @@
 //
 //  UIView+ViewAnimationTesting.h
-//  notecards
+//  SpecHelpers
 //
 //  Created by Andrew J Wagner 4/21/13.
 //  Copyright (c) 2012 Drewag. All rights reserved.
