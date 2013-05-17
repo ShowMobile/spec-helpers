@@ -25,15 +25,25 @@
 
 @implementation NSObject (Creator)
 
-- (id)createWithProperties:(NSDictionary *)dictionary {
-    [self init];
++ (id)instanceWithProperties:(NSDictionary *)dictionary {
+    return [[[self alloc] initWithProperties:dictionary] autorelease];
+}
+
+- (id)initWithProperties:(NSDictionary *)dictionary {
+    self = [self init];
+    if (self) {
+        [self updateWithProperties:dictionary];
+    }
+    return self;
+}
+
+- (id)updateWithProperties:(NSDictionary *)dictionary {
     [dictionary enumerateKeysAndObjectsUsingBlock:^(NSString *key, id obj, BOOL *stop) {
         NSString *retClassname = [self getTypeNameFromPropertyNamed:key];
         if (retClassname) {
             [self setValue:obj forKey:key forClassName:retClassname];
         }
     }];
-
     return self;
 }
 
@@ -74,7 +84,7 @@
         [self setValue:value forKey:key];
     }
     else if ([value isKindOfClass:[NSDictionary class]]) {
-        NSObject *newValue = [[class alloc] createWithProperties:value];
+        NSObject *newValue = [[class alloc] initWithProperties:value];
         [self setValue:newValue forKey:key];
     }
     else {

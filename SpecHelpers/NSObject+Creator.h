@@ -8,6 +8,8 @@
 
 @interface NSObject (Creator)
 
-- (id)createWithProperties:(NSDictionary *)dictionary;
++ (id)instanceWithProperties:(NSDictionary *)dictionary;
+- (id)initWithProperties:(NSDictionary *)dictionary;
+- (id)updateWithProperties:(NSDictionary *)dictionary;
 
 @end
