@@ -86,6 +86,11 @@
     else if ([value isKindOfClass:[NSDictionary class]]) {
         NSObject *newValue = [[class alloc] initWithProperties:value];
         [self setValue:newValue forKey:key];
+        [newValue release];
+    }
+    else if (class == [NSURL class] && [[value class] isSubclassOfClass:[NSString class]]) {
+        NSURL *newValue = [NSURL URLWithString:value];
+        [self setValue:newValue forKey:key];
     }
     else {
         @throw [NSException exceptionWithName:@"Failed to Set Property" reason:@"Value type doesn't match property type" userInfo:@{
