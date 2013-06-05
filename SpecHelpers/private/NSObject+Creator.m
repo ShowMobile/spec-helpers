@@ -12,7 +12,8 @@
 
 @interface NSObject (PrivateCreator)
 
--(NSString*)getTypeNameFromPropertyNamed:(NSString *)name;
+- (NSString*)getTypeNameFromPropertyNamed:(NSString *)name;
+- (NSString *)classNameWithoutProtocol:(NSString *)oldClassName;
 - (void)setValue:(id)value
           forKey:(NSString *)key
     forClassName:(NSString *)className;
@@ -60,6 +61,8 @@
     if ([className characterAtIndex:0] == '@') {
         // Is an object
         NSString *classString = [className substringWithRange:NSMakeRange(2,[className length] - 3)];
+        classString = [self classNameWithoutProtocol:classString];
+
         Class valueClass = NSClassFromString(classString);
         if (valueClass) {
             [self setValue:value forKey:key forClass:valueClass];
@@ -101,8 +104,7 @@
     }
 }
 
--(NSString*)getTypeNameFromPropertyNamed:(NSString *)name
-{
+-(NSString*)getTypeNameFromPropertyNamed:(NSString *)name {
     objc_property_t property = class_getProperty([self class], [name UTF8String]);
     if (!property) return nil;
 
@@ -118,6 +120,17 @@
     }
     returnTypeName = [returnTypeName substringToIndex:i];
     return returnTypeName;
+}
+
+- (NSString *)classNameWithoutProtocol:(NSString *)oldClassName {
+    NSUInteger endIndex = oldClassName.length;
+    for (NSUInteger index = 0; index < oldClassName.length; index++) {
+        if ([oldClassName characterAtIndex:index] == '<') {
+            endIndex = index;
+            break;
+        }
+    }
+    return [oldClassName substringToIndex:endIndex];
 }
 
 @end
