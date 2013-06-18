@@ -83,7 +83,10 @@
           forKey:(NSString *)key
         forClass:(Class)class
 {
-    if ([[value class] isSubclassOfClass:class]) {
+    if ([value isEqual:[NSNull null]]) {
+        [self setValue:nil forKey:key];
+    }
+    else if ([[value class] isSubclassOfClass:class]) {
         [self setValue:value forKey:key];
     }
     else if ([value isKindOfClass:[NSDictionary class]]) {
