@@ -99,7 +99,10 @@
         [self setValue:newValue forKey:key];
     }
     else {
-        @throw [NSException exceptionWithName:@"Failed to Set Property" reason:@"Value type doesn't match property type" userInfo:@{
+        @throw [NSException
+            exceptionWithName:@"Failed to Set Property"
+            reason:[NSString stringWithFormat:@"Value type for key (%@) doesn't match property type", key]
+            userInfo:@{
             @"property": key,
             @"valueClass": NSStringFromClass([value class]),
             @"propertyClass": NSStringFromClass(class),
