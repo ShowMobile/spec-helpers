@@ -98,6 +98,10 @@
         NSURL *newValue = [NSURL URLWithString:value];
         [self setValue:newValue forKey:key];
     }
+    else if (class == [NSSet class] && [value isKindOfClass:[NSArray class]]) {
+        NSSet *set = [NSSet setWithArray:value];
+        [self setValue:set forKey:key];
+    }
     else {
         @throw [NSException
             exceptionWithName:@"Failed to Set Property"
